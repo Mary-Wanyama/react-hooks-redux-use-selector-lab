@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import {createStore} from "redux"
+import {Provider} from "react-redux
 
 import usersReducer from "./features/users/usersSlice";
 
@@ -8,7 +10,9 @@ import usersReducer from "./features/users/usersSlice";
 
 ReactDOM.render(
   // add imports and code
-  <App />,
+  <Provider store = {store}>
+  <App />
+  </Provider>
   // add imports and code
   document.getElementById("root")
 );
